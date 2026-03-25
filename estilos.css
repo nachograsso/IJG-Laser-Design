@@ -1,0 +1,141 @@
+﻿/* estilos.css */
+
+:root {
+    --dark-matte: #121212; /* Negro profundo mate */
+    --industrial-gray: #2c2c2c; /* Gris maquinaria */
+    --laser-accent: #ff4d00; /* Naranja intenso (el color del haz láser) */
+    --premium-silver: #e0e0e0; /* Texto y detalles claros */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+    color: var(--dark-matte);
+}
+
+/* 1. Navbar con color unificado */
+.navbar-custom {
+    background-color: var(--dark-matte) !important;
+}
+    /* Efecto hover unificado para TODOS los botones de la navbar */
+.navbar-custom .btn-outline-light {
+    border-radius: 4px; /* Opcional: bordes ligeramente redondeados */
+    font-weight: 500;
+    transition: all 0.3s ease; /* Transición suave de borde y fondo */
+}
+
+ .navbar-custom .btn-outline-light:hover {
+            background-color: var(--laser-accent) !important;
+            border-color: var(--laser-accent) !important;
+            color: white !important;
+            transform: translateY(-2px); /* Pequeño saltito al pasar el ratón */
+        }
+
+/* 2. Hero Section con gradiente industrial */
+.hero-image {
+    background-image: linear-gradient(rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.8)), url('https://filament2print.com/img/cms/blog/67/dysteel-laser-cutting.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 50vh; /* Le da buena altura para centrar el contenido */
+}
+
+/* 3. Centrado ordenado para listas y formularios */
+.list-centered {
+    display: inline-block;
+    text-align: left; /* Mantiene las viñetas prolijas pero el bloque entero se centra */
+    margin: 0 auto;
+}
+
+.form-centered {
+    max-width: 500px;
+    margin: 0 auto;
+}
+/* Efectos para las imágenes de la Galería */
+.galeria-item {
+    overflow: hidden; /* Evita que la imagen se salga al hacer zoom */
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+}
+
+.galeria-item img {
+        transition: transform 0.4s ease; /* Transición suave */
+        width: 100%;
+        object-fit: cover; /* Asegura que la imagen mantenga buenas proporciones */
+        aspect-ratio: 4/3; /* Mantiene todas las fotos del mismo tamaño rectangular */
+    }
+
+    .galeria-item:hover img {
+        transform: scale(1.05); /* Efecto de acercamiento al pasar el ratón */
+        cursor: pointer;
+    }
+
+/* Tarjetas de Servicio Premium */
+.card-service {
+    background: white;
+    border-radius: 0; /* Bordes rectos = más industrial */
+    border-left: 5px solid var(--industrial-gray);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+    .card-service:hover {
+        transform: translateY(-5px);
+        border-left-color: var(--laser-accent);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    }
+
+/* Botones con identidad */
+.btn-primary {
+    background-color: var(--laser-accent);
+    border: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 30px;
+}
+
+    .btn-primary:hover {
+        background-color: #e64500;
+        transform: scale(1.02);
+    }
+
+/* Sección de Materiales */
+#materiales {
+    background-color: var(--dark-matte);
+    color: white;
+}
+
+    #materiales i {
+        color: var(--laser-accent); /* Todos los iconos color naranja láser */
+        margin-bottom: 15px;
+        display: inline-block;
+    }
+
+/* El código del botón flotante */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+    .whatsapp-float:hover {
+        transform: scale(1.1);
+        color: white;
+        background-color: #128c7e;
+    }
